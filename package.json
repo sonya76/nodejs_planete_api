@@ -1,0 +1,27 @@
+{
+    "name": "nodejs_planete_api",
+    "description": "**But du projet** : Créer une **api rest** avec le framework **express** , **node.js** et **sqlite**.",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sonya76/nodejs_planete_api.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/sonya76/nodejs_planete_api/issues"
+    },
+    "homepage": "https://github.com/sonya76/nodejs_planete_api#readme",
+    "dependencies": {
+        "ejs": "^3.1.8",
+        "cors": "^2.8.5",
+        "express": "^4.18.1",
+        "sqlite3": "^5.1.0"
+    }
+}

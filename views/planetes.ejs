@@ -1,0 +1,33 @@
+
+<%- include("_header") -%>
+
+<h1>Liste des planètes (<%= model.length %>)</h1>
+
+  <% for (const planete of model) { %>
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="<%= planete.image %>" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title"><%= planete.nom %></h5>
+        <a href="/planete/<%= planete.id %>" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#planete<%= planete.id %>">En savoir plus</a>
+      </div>
+    </div>
+    <!-- Modal -->
+      <div class="modal fade" id="planete<%= planete.id %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel"><%= planete.nom %></h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img class="card-img-top" src="<%= planete.image %>" alt="Card image cap">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% } %>
+
+<%- include("_footer") -%>
